@@ -3,7 +3,7 @@ from datetime import datetime
 import numpy as np
 
 # Create Excel writer
-writer = pd.ExcelWriter('PLANNING_2025_V2.xlsx', engine='xlsxwriter')
+writer = pd.ExcelWriter('xxxxxxx.xlsx', engine='xlsxwriter')
 
 # Generate dates for the year
 Dates = pd.date_range(start='2025-01-01', end='2025-12-31', freq='D')
@@ -18,8 +18,8 @@ df_dashboard = pd.DataFrame({
 
 # Resource Management DataFrame
 df_resources = pd.DataFrame({
-    'ID_Engineer': ['GAG', 'NMI', 'FLI', 'THU', 'MPC', 'CMS'],
-    'Name': ['Gregory', 'Nikolay', 'Frank', 'Thomas', 'Marco', 'CMS'],
+    'ID_Engineer': ['AAA', 'BBB', 'CCC', 'DDD', 'EEE', 'HHH'],
+    'Name': ['GUY1', 'GUY2', 'GUY3', 'GUY4', 'GUY6', 'GUY7'],
     'Country': ['FR', 'BG', 'DE', 'DE', 'NL', 'NL'],
     'Competencie': ['Mechanic', 'Electric', 'Programming', 'Validation', 'Support', 'Support'],
     'Availability': [75, 100, 100, 100, 100, 100]
@@ -99,7 +99,7 @@ worksheet_planning.data_validation('H2:H1000', {
 
 worksheet_planning.data_validation('D2:D1000', {
     'validate': 'list',
-    'source': ['SPS60NF', 'SPS65NF', 'I-DL20NF', 'I-DS25NF'],
+    'source': ['VVVV', 'VVVV10', 'UUUU', 'UUUU10'],
     'input_title': 'Machine',
     'input_message': 'Select machine type'
 })
